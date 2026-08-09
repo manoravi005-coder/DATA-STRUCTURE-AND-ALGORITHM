@@ -30,7 +30,7 @@ public class Main{
     boolean found = false;
     int target = sc.nextInt();
     while(current != null){
-      if(current.data == target) found = true;
+      if(current.data == target){ found = true; break;}
       current = current.next;
     }
     if(found) System.out.print("Element found");
