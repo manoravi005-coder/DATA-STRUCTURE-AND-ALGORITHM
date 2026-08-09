@@ -28,7 +28,7 @@ public class Main{
     Node current = head;
     int count = 0;
     while(current != null){
-      if(current.data != 0) count++;
+      count++;
       current = current.next;
     }
     System.out.print(count);
