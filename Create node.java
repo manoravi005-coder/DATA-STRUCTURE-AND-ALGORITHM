@@ -8,32 +8,27 @@ class Node{
   }
 }
 public class Main {
-    public static void printLinkedList(Node head){
-      //traversal part
-      Node temp = head;
-      while(temp != null){
-        System.out.print(temp.data + " ");
-        temp = temp.next;
-      }
-    }
     public static void main(String[] args) {
       Scanner sc = new Scanner(System.in);
       int n = sc.nextInt();
       Node head = null;
       Node tail = null;
-      for(int i = 0; i<n; i++){
+      for(int i = 0; i<n;i++){
         int value = sc.nextInt();
-        Node newNode = new Node(value);
+        Node newnode = new Node(value);
         if(head == null){
-          head = newNode;
-          tail = newNode;
+          head = newnode;
+          tail = newnode;
         }
         else{
-          tail.next = newNode;
-          tail = newNode;
+          tail.next = newnode;
+          tail = newnode;
         }
       }
-      printLinkedList(head);
-      sc.close();
+      Node current = head;
+      while(current!=null){
+        System.out.print(current.data + " ");
+        current = current.next;
+      }
     }
 }
